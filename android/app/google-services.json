@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "792672749617",
+    "project_id": "asroo-chop-getxx",
+    "storage_bucket": "asroo-chop-getxx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792672749617:android:1d12a7f8558271a53ced10",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLYmc2I5p8JDLmb7moSkOD1p3OYDKOmGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792672749617:android:c67483fddf8b42f83ced10",
+        "android_client_info": {
+          "package_name": "com.example.shop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLYmc2I5p8JDLmb7moSkOD1p3OYDKOmGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

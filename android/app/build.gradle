@@ -1,0 +1,59 @@
+plugins {
+    id "com.android.application"
+    id 'com.google.gms.google-services' // FlutterFire Configuration
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin" // Flutter Gradle Plugin
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader("UTF-8") { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterVersionCode = localProperties.getProperty("flutter.versionCode")
+if (flutterVersionCode == null) {
+    flutterVersionCode = "1"
+}
+
+def flutterVersionName = localProperties.getProperty("flutter.versionName")
+if (flutterVersionName == null) {
+    flutterVersionName = "1.0"
+}
+
+android {
+    namespace = "com.example.shop"
+    compileSdk = 34 // تأكد من أن هذا الإصدار محدث ومتوافق مع المكونات الأخرى
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17 // ضبط إلى الإصدار 17
+        targetCompatibility = JavaVersion.VERSION_17 // ضبط إلى الإصدار 17
+    }
+
+    defaultConfig {
+        applicationId = "com.example.shop"
+        minSdk = 23 // تأكد من أن هذا الإصدار يناسب متطلبات المكتبات
+        targetSdk = 34
+        versionCode = flutterVersionCode.toInteger()
+        versionName = flutterVersionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = "17" // ضبط الإصدار المتوافق مع Java
+    }
+}
+
+flutter {
+    source = "../.."
+}
